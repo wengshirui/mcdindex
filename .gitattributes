@@ -1,0 +1,15 @@
+# 默认按文本处理，仓库内统一 LF
+* text=auto eol=lf
+
+# 参赛声明必须与官方原文逐字节一致：禁止任何换行符转换
+CONTEST_DECLARATION.md -text
+
+# 二进制资源不参与 diff
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary
