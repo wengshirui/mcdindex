@@ -154,6 +154,13 @@ python tools/selftest.py --with-data                     # 自测（通过/失�
 - `src/mcdindex.py` —— 计算引擎。纯函数、零 I/O、零第三方依赖。改动后务必跑 `tools/selftest.py`
 - `data/observations.json` —— 全国预采观测（337 城 / 5,817 家门店 / 13,661 个锚点探针 / 1,191 家得来速 / 785 份菜单），
   采集于 2026-10-12，累计 37,011 次 MCP 调用
+  - ⚠️ **两个城市数别混**：`meta.citiesInGroup = 337` 是**参加排名的比较组**；
+    `meta.citiesWithStores = 300` 是**实际采到门店的城市**。差的 37 城（多为地广人稀的地区/盟）
+    在 18,100 个关键词下一家都没采到，密度记 0 —— 那是**采样下界为 0**，不是"确实没有门店"，
+    所以它们必须留在组里。指数的分项是组内百分位，**比分母大小本身就是分制的一部分**。
+  - 快照必须与 SQLite 工作库同口径：`tools/selftest.py --with-data` 有护栏断言
+    `城市数 == meta.citiesInGroup`。曾因导出时过滤稀疏城市（快照只剩 300 城）导致
+    页面公布的名次复现不出来。
 - `tools/db.py` —— 本地 SQLite 数据仓；分析脚本优先从它读，没有库才退回 JSON 快照
 - `MCP_INTEGRATION.md` —— 完整调用流程与字段口径
 - `tools/mcp_probe.py` —— MCP 握手与工具清单探针，排查连接问题先跑它

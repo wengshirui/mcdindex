@@ -181,6 +181,17 @@ def run_data() -> None:
     # 这些断言必须**与数据范围无关** —— 江苏 13 城或全国 300+ 城都应成立，
     # 否则换一批数据就全红，测的就不是逻辑而是"当前恰好采到几个城"。
     chk("观测非空", n > 0, True)
+
+    # 🔴 分发快照必须与工作库同口径：快照里"没有门店的城市"也要留在比较组内。
+    # 曾经 export_json 用 `if sampledStoreCount` 把它们过滤掉，快照只剩 300 城，
+    # 组内百分位的分母被悄悄改小，页面公布的分数与名次复现不出来。
+    # 这里不写死 337（那又变成依赖数据范围），只断言三者自洽。
+    mt = raw.get("meta") or {}
+    chk("快照城市数 == meta.citiesInGroup", n, mt.get("citiesInGroup"))
+    chk("有门店的城市数 == meta.citiesWithStores",
+        sum(1 for o in obs.values() if o.get("sampledStoreCount")),
+        mt.get("citiesWithStores"))
+
     chk("所有城市都进了结果", len(r["cities"]), n)
     chk(f"排名连续 1..{n}", sorted(x["rank"] for x in r["cities"].values()), list(range(1, n + 1)))
     chk("排名与得分单调一致",

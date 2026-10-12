@@ -4,7 +4,8 @@
     "mcpCalls": 37011,
     "errors": 25527,
     "runs": 3,
-    "cities": 300,
+    "citiesInGroup": 337,
+    "citiesWithStores": 300,
     "scope": "全国地级及以上行政区",
     "method": {
       "stores": "query-nearby-stores searchType=2 beType=1，同构关键词轮询去重",
@@ -283878,6 +283879,19 @@
         }
       ]
     },
+    "鹤岗市": {
+      "city": "鹤岗市",
+      "keywordCount": 54,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "双鸭山市": {
       "city": "双鸭山市",
       "keywordCount": 54,
@@ -286594,6 +286608,19 @@
         }
       ]
     },
+    "黑河市": {
+      "city": "黑河市",
+      "keywordCount": 52,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "绥化市": {
       "city": "绥化市",
       "keywordCount": 56,
@@ -288282,6 +288309,19 @@
           }
         }
       ]
+    },
+    "大兴安岭地区": {
+      "city": "大兴安岭地区",
+      "keywordCount": 53,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
     },
     "淮北市": {
       "city": "淮北市",
@@ -298280,6 +298320,19 @@
           }
         }
       ]
+    },
+    "鹰潭市": {
+      "city": "鹰潭市",
+      "keywordCount": 49,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
     },
     "吉安市": {
       "city": "吉安市",
@@ -412022,6 +412075,19 @@
         }
       ]
     },
+    "三沙市": {
+      "city": "三沙市",
+      "keywordCount": 49,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "儋州市": {
       "city": "儋州市",
       "keywordCount": 56,
@@ -446998,6 +447064,19 @@
         }
       ]
     },
+    "甘孜藏族自治州": {
+      "city": "甘孜藏族自治州",
+      "keywordCount": 56,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "凉山彝族自治州": {
       "city": "凉山彝族自治州",
       "keywordCount": 56,
@@ -468731,6 +468810,32 @@
         }
       ]
     },
+    "普洱市": {
+      "city": "普洱市",
+      "keywordCount": 56,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "临沧市": {
+      "city": "临沧市",
+      "keywordCount": 54,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "楚雄彝族自治州": {
       "city": "楚雄彝族自治州",
       "keywordCount": 56,
@@ -476954,6 +477059,19 @@
         }
       ]
     },
+    "怒江傈僳族自治州": {
+      "city": "怒江傈僳族自治州",
+      "keywordCount": 50,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "迪庆藏族自治州": {
       "city": "迪庆藏族自治州",
       "keywordCount": 49,
@@ -482252,6 +482370,32 @@
         }
       ]
     },
+    "那曲市": {
+      "city": "那曲市",
+      "keywordCount": 56,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "阿里地区": {
+      "city": "阿里地区",
+      "keywordCount": 53,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "西安市": {
       "city": "西安市",
       "keywordCount": 55,
@@ -484920,6 +485064,19 @@
           }
         }
       ]
+    },
+    "铜川市": {
+      "city": "铜川市",
+      "keywordCount": 50,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
     },
     "宝鸡市": {
       "city": "宝鸡市",
@@ -498333,6 +498490,45 @@
         }
       ]
     },
+    "嘉峪关市": {
+      "city": "嘉峪关市",
+      "keywordCount": 51,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "金昌市": {
+      "city": "金昌市",
+      "keywordCount": 48,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "白银市": {
+      "city": "白银市",
+      "keywordCount": 51,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "天水市": {
       "city": "天水市",
       "keywordCount": 53,
@@ -500765,6 +500961,19 @@
         }
       ]
     },
+    "平凉市": {
+      "city": "平凉市",
+      "keywordCount": 53,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "酒泉市": {
       "city": "酒泉市",
       "keywordCount": 53,
@@ -502597,6 +502806,45 @@
         }
       ]
     },
+    "陇南市": {
+      "city": "陇南市",
+      "keywordCount": 55,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "临夏回族自治州": {
+      "city": "临夏回族自治州",
+      "keywordCount": 54,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "甘南藏族自治州": {
+      "city": "甘南藏族自治州",
+      "keywordCount": 54,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "西宁市": {
       "city": "西宁市",
       "keywordCount": 53,
@@ -503172,6 +503420,97 @@
           }
         }
       ]
+    },
+    "海东市": {
+      "city": "海东市",
+      "keywordCount": 52,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "海北藏族自治州": {
+      "city": "海北藏族自治州",
+      "keywordCount": 50,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "黄南藏族自治州": {
+      "city": "黄南藏族自治州",
+      "keywordCount": 50,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "海南藏族自治州": {
+      "city": "海南藏族自治州",
+      "keywordCount": 51,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "果洛藏族自治州": {
+      "city": "果洛藏族自治州",
+      "keywordCount": 52,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "玉树藏族自治州": {
+      "city": "玉树藏族自治州",
+      "keywordCount": 52,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "海西蒙古族藏族自治州": {
+      "city": "海西蒙古族藏族自治州",
+      "keywordCount": 53,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
     },
     "银川市": {
       "city": "银川市",
@@ -505053,6 +505392,58 @@
           }
         }
       ]
+    },
+    "石嘴山市": {
+      "city": "石嘴山市",
+      "keywordCount": 49,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "吴忠市": {
+      "city": "吴忠市",
+      "keywordCount": 51,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "固原市": {
+      "city": "固原市",
+      "keywordCount": 51,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "中卫市": {
+      "city": "中卫市",
+      "keywordCount": 49,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
     },
     "乌鲁木齐市": {
       "city": "乌鲁木齐市",
@@ -507642,6 +508033,19 @@
           }
         }
       ]
+    },
+    "吐鲁番市": {
+      "city": "吐鲁番市",
+      "keywordCount": 49,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
     },
     "哈密市": {
       "city": "哈密市",
@@ -510750,6 +511154,58 @@
         }
       ]
     },
+    "阿克苏地区": {
+      "city": "阿克苏地区",
+      "keywordCount": 55,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "克孜勒苏柯尔克孜自治州": {
+      "city": "克孜勒苏柯尔克孜自治州",
+      "keywordCount": 50,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "喀什地区": {
+      "city": "喀什地区",
+      "keywordCount": 56,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "和田地区": {
+      "city": "和田地区",
+      "keywordCount": 54,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
     "伊犁哈萨克自治州": {
       "city": "伊犁哈萨克自治州",
       "keywordCount": 56,
@@ -511174,6 +511630,32 @@
           }
         }
       ]
+    },
+    "塔城地区": {
+      "city": "塔城地区",
+      "keywordCount": 53,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
+    },
+    "阿勒泰地区": {
+      "city": "阿勒泰地区",
+      "keywordCount": 53,
+      "sampledStoreCount": 0,
+      "stores": {},
+      "driveThruCount": 0,
+      "driveThruMatched": 0,
+      "driveThruBase": 0,
+      "driveThruCodes": [],
+      "coreProbe": null,
+      "anchorProbes": {},
+      "priceSamples": []
     }
   }
 }

@@ -436,12 +436,16 @@ def meta(conn, scope: str = None) -> dict:
     n_runs = conn.execute("SELECT COUNT(*) c FROM run WHERE calls > 0").fetchone()["c"]
     run = conn.execute("SELECT * FROM run ORDER BY run_id DESC LIMIT 1").fetchone()
     n_city = conn.execute("SELECT COUNT(DISTINCT city) c FROM store").fetchone()["c"]
+    # 两个"城市数"必须分开叫：采到门店的 300 城 ≠ 参加排名的 337 城。
+    # 混用一个 "cities" 曾让快照与工作库算出不同的组内百分位（见 export_json 注释）。
+    n_group = conn.execute("SELECT COUNT(DISTINCT city) c FROM probe").fetchone()["c"]
     return {
         "collectedAt": (run["finished_at"] or run["started_at"]) if run else None,
         "mcpCalls": calls,
         "errors": errs,
         "runs": n_runs,
-        "cities": n_city,
+        "citiesInGroup": n_group,
+        "citiesWithStores": n_city,
         "scope": scope or (run["scope"] if run else None),
         "method": {
             "stores": "query-nearby-stores searchType=2 beType=1，同构关键词轮询去重",
@@ -473,12 +477,29 @@ def common_keywords() -> dict:
     return {"roads": cars, "poi": poi}
 
 
-def export_json(conn, path: str = JSON_PATH, scope: str = None) -> dict:
+def export_json(conn, path: str = JSON_PATH, scope: str = None,
+                drop_sparse: bool = False) -> dict:
+    """把工作库导出成随仓库分发的 JSON 快照。
+
+    🔴 `drop_sparse` 必须保持 False。这里曾写成
+    `if o["sampledStoreCount"]`，把"18,100 个关键词下一家门店都没采到"的城市
+    过滤掉了 —— 快照剩 300 城，而工作库路径是 337 城。
+
+    后果不是少几行数据，而是**评分被悄悄改掉**：指数的分项是组内百分位，
+    比较组规模本身就是分制的一部分。实测两条路径算出的结果确有差异
+    （佛山 96.3 → 96.2，苏州与大连名次互换），也就是说
+    **随仓库分发的快照复现不出页面上公布的名次**。
+
+    稀疏城市的"密度 0"是采样下界，不是"确实没有门店"，它本来就该留在组里
+    （否则会跟"确实没店"混为一谈）。所以默认全量导出。
+    """
     cities = to_observations(conn)
+    if drop_sparse:
+        cities = {c: o for c, o in cities.items() if o["sampledStoreCount"]}
     payload = {
         "meta": meta(conn, scope),
         "commonKeywords": common_keywords(),
-        "cities": {c: o for c, o in cities.items() if o["sampledStoreCount"]},
+        "cities": cities,
     }
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as f:
