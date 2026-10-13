@@ -87,7 +87,10 @@ process.on('uncaughtException', e => {
 
   // 「这个指数是什么」区块：断言渲染出来的数字与内嵌数据一致 ——
   // 光断言"文字存在"是假绿（文案可以写死），必须卡住"文案是算出来的"。
-  await t('说明·区块渲染且引用星巴克指数', async () => {
+  // ⚠️ 额外加一条**负向**断言：文案里不得出现竞品品牌。
+  // 比赛规则 activityGuidelines.md 第 84 行禁止把麦当劳品牌/产品与其他品牌做对比，
+  // 所以「没有竞品品牌」不是文风偏好，是合规要求 —— 一旦有人写回去必须红灯。
+  await t('说明·区块渲染且引用巨无霸指数', async () => {
     const r = await page.evaluate(() => {
       const el = document.getElementById('about');
       if (!el) return { missing: true };
@@ -102,8 +105,9 @@ process.on('uncaughtException', e => {
       return {
         cards: el.querySelectorAll('.c').length,
         len: txt.length,
-        hasStarbucks: txt.includes('星巴克指数') && txt.includes('中杯拿铁指数'),
+        hasRef: txt.includes('巨无霸指数') && txt.includes('购买力平价'),
         hasNegativeList: txt.includes('它不是什么') && txt.includes('不是 GDP'),
+        competitorHits: (txt.match(/星巴克|瑞幸|肯德基|汉堡王|华莱士|塔斯汀|德克士/g) || []),
         placeholder: /undefined|null|NaN|\{\{/.test(txt),
         weightsRendered: pcts, weightsWanted: want,
         weightsSum: pcts.reduce((a, b) => a + b, 0),
@@ -119,7 +123,8 @@ process.on('uncaughtException', e => {
     r.weightsOk = JSON.stringify(r.weightsRendered) === JSON.stringify(r.weightsWanted) && r.weightsSum === 100;
     r.gdpOk = !!r.overlapRendered && JSON.stringify(r.overlapRendered) === JSON.stringify(r.overlapWanted)
       && r.rhoRendered === r.rhoWanted;
-    r.ok = !r.missing && r.cards === 3 && r.len > 400 && r.hasStarbucks && r.hasNegativeList
+    r.ok = !r.missing && r.cards === 3 && r.len > 400 && r.hasRef && r.hasNegativeList
+      && r.competitorHits.length === 0
       && !r.placeholder && r.weightsOk && r.rankOk && r.gdpOk;
     return r;
   });
